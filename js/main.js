@@ -55,14 +55,16 @@ getSaveBtn.addEventListener("click", function(e) {
 			};
 			transactions.income.push(incomeItem);
 		}
-		if (expenseName && expenseAmount && currentBlanche > expenseAmount) {
-			const expenseItem = {
-				title: expenseName,
-				amount: expenseAmount
-			};
-			transactions.expense.push(expenseItem);
-		} else {
-			alert("insufficient Blance");
+		if (expenseName && expenseAmount) {
+			if (currentBlanche < expenseAmount) {
+				alert("Insufficient Blance");
+			} else {
+				const expenseItem = {
+					title: expenseName,
+					amount: expenseAmount
+				};
+				transactions.expense.push(expenseItem);
+			}
 		}
 		getPlusesBtn.classList.remove("hide");
 	} else {
