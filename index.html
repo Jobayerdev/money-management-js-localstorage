@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Money Management</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="name">
+				<h3>Track statements</h3>
+				<h1 class="blance">
+					<p>Blance</p>
+					$ <span id="blance">00.00</span>
+				</h1>
+			</div>
+			<div class="credit">
+				<div class="income">
+					<p>Income</p>
+					<h4>$ <span id="income">00.00</span></h4>
+				</div>
+				<div class="expense">
+					<p>Expense</p>
+					<h4>$ <span id="expense">00.00</span></h4>
+				</div>
+			</div>
+			<div class="records">
+				<h1 class="records-title">Income</h1>
+				<div class="income-list"></div>
+				<h1 class="records-title">Expense</h1>
+				<div class="expense-list"></div>
+			</div>
+			<div class="addrecord hide">
+				<form action="">
+					<div class="form-group">
+						<label for="income">Income</label>
+						<input type="text" id="incomeName" placeholder="Income Source" />
+						<input type="number" id="incomeAmount" placeholder="Amount" />
+					</div>
+					<div class="form-group">
+						<label for="expense">Expense</label>
+						<input type="text" id="expenseName" placeholder="Expense Source" />
+						<input type="number" id="expenseAmount" placeholder="Amount" />
+					</div>
+					<div class="control-btn">
+						<button id="save">Save</button>
+						<button id="close">Close</button>
+					</div>
+				</form>
+			</div>
+			<button class="addRecordBtn">+</button>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
